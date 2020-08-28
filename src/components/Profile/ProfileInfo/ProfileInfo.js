@@ -79,8 +79,6 @@ const ProfileInfo = ({profile,status,updateStatus, isOwner,savePhoto,saveProfile
                                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
                            </Paper>
                        </Container>
-
-
                         <Container maxWidth= 'md' style={{padding: '10px'}}>
                             <Paper style={{padding: '5px',  display: 'flex',backgroundColor: '#eaf1f6' }}>
                                 {editMode
@@ -95,7 +93,6 @@ const ProfileInfo = ({profile,status,updateStatus, isOwner,savePhoto,saveProfile
 
 
 const Contact = ({contactTitle, contactValue}) => {
-    debugger
     if (contactValue !== '') {
         if (contactTitle === 'facebook') {
             contactTitle = <FacebookIcon color={'primary'}/>
@@ -109,14 +106,15 @@ const Contact = ({contactTitle, contactValue}) => {
             contactTitle = <YouTubeIcon color={'primary'}/>
         } else if (contactTitle === 'github') {
             contactTitle = <GitHubIcon color={'primary'}/>
-        } else if (contactTitle === 'vk' || contactTitle === 'mainLink') {
+        } else if (contactTitle === 'vk') {
             contactTitle = 'vk'
+        } else if (contactTitle === 'mainLink') {
             contactValue = 'mainLink'
         }
     }
 
     return <div className={s.contact}>
-        <a href = {`${contactValue}`}>
+        <a href = {`${contactValue}`} style={{textDecoration: 'none'}}>
             {contactValue !== '' && contactTitle}
         </a>
     </div>

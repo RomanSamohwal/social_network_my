@@ -1,5 +1,4 @@
 import React, {Suspense} from 'react';
-import {Route} from "react-router-dom";
 
 export const withSuspense = (Component) => {
     return (props) => {

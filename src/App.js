@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
 import './App.css';
-import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {BrowserRouter, Route, withRouter, Switch, Redirect} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -13,8 +13,11 @@ import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import PersistentDrawerLeft from './Panel';
 import {getNewMessagesCount} from './redux/dialogs-reducer';
+import ProfileContainer from './components/Profile/ProfileInfo/ProfileContainer';
+import Profile from './components/Profile/Profile';
 const DialogsContainer = React.lazy(() => import('./components/Dialigs/DialogsContainer'));
-const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileInfo/ProfileContainer'));
+/*const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileInfo/ProfileContainer'));*/
+
 
 
 class App extends React.Component {
@@ -34,23 +37,24 @@ class App extends React.Component {
             return <Preloader/>
         }
         return (
+
             <div className='app-wrapper'>
                 <PersistentDrawerLeft newMessagesCount={this.props.newMessagesCount}/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile/:userId?' render={() => <Suspense fallback={<Preloader/>}>
-                        <ProfileContainer/>
-                    </Suspense>}/>
-                    <Route path='/dialogs/:userId?' render={(props) => <Suspense fallback={<Preloader/>}>
-                        <DialogsContainer userId={props.match.params.userId}/>
-                    </Suspense>}/>
-                    <Route path='/news' render={() => <News/>}/>
-                    <Route path='/music' render={() => <Music/>}/>
-                    <Route path='/settings' render={() => <Settings/>}/>
-                    <Route path='/users' render={() => <UsersContainer/>}/>
-                    <Route path='/login' render={() => <LoginPages/>}/>
+          <Switch>
+              <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+              <Route path='/dialogs/:userId?' render={(props) => <Suspense fallback={<Preloader/>}>
+                  <DialogsContainer userId={props.match.params.userId}/>
+              </Suspense>}/>
+              <Route path='/news' render={() => <News/>}/>
+              <Route path='/music' render={() => <Music/>}/>
+              <Route path='/settings' render={() => <Settings/>}/>
+              <Route path='/users' render={() => <UsersContainer/>}/>
+              <Route path='/login' render={() => <LoginPages/>}/>
+              <Redirect exact path ={'/'} to={'./profile'} render = {()=><ProfileContainer/>}/>
+          </Switch>
                 </div>
             </div>
-
         );
     }
 }
