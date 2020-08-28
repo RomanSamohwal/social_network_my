@@ -18,7 +18,7 @@ const Profile = (props) => {
                                  saveProfile={props.saveProfile}/>
                 </div>
                 <div>
-                    <Container maxWidth='md' style={{padding: '10px'}} >
+                    <Container maxWidth='md' style={{padding: '10px'}}>
                         <Paper style={{backgroundColor: '#eaf1f6'}}><MyPostsContainer/></Paper>
                     </Container>
                 </div>

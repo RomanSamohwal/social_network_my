@@ -16,6 +16,7 @@ import WebIcon from '@material-ui/icons/Web';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import avatar from './../../../assets/images/ava.jpg'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -59,7 +60,7 @@ const ProfileInfo = ({profile,status,updateStatus, isOwner,savePhoto,saveProfile
                                 alignItems: 'center',
                                 backgroundColor: '#eaf1f6'
                             }}>
-                                <img src={profile.photos.large || ""} className={s.mainPhoto}/>
+                                <img src={profile.photos.large || avatar} className={s.mainPhoto}/>
                                 {isOwner && <div>
                                     <div className={classes.root}>
                                         <input accept="image/*" className={classes.input} id="icon-button-file" type="file" onChange={onMainPhotoSelected}/>
@@ -109,8 +110,8 @@ const Contact = ({contactTitle, contactValue}) => {
         } else if (contactTitle === 'github') {
             contactTitle = <GitHubIcon color={'primary'}/>
         } else if (contactTitle === 'vk' || contactTitle === 'mainLink') {
-            contactTitle = ''
-            contactValue = ''
+            contactTitle = 'vk'
+            contactValue = 'mainLink'
         }
     }
 
@@ -124,30 +125,28 @@ const Contact = ({contactTitle, contactValue}) => {
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
     return (<div className={s.ProfileInfoContainer}>
         <div className={s.aboutMe}>
-            <h2>
-                About me
-            </h2>
+            <h2>About me</h2>
         </div>
         <div className={s.allInformation}>
             <div className={s.generalInformation}>
                 <div className={s.capContainer}>
                     <div className={s.cap}>
-                        <b>General Information :</b>
+                        <b>General Information </b>
                     </div>
                 </div>
 
                 <div>
-                    <b> FullName : </b> {profile.fullName}</div>
-                <div><b>About me : </b>
+                    <b> FullName</b> {profile.fullName}</div>
+                <div><b>About me </b>
                     {profile.aboutMe}</div>
-                <div><b>Looking for job : </b> {profile.lookingForAJob ? "Yes" : "No"}</div>
+                <div><b>Looking for job</b> {profile.lookingForAJob ? "Yes" : "No"}</div>
                 {profile.lookingForAJob && <div>
-                    <b>Looking for job a description : </b> {profile.lookingForAJobDescription}</div>}
+                    <b>Looking for job a description </b> {profile.lookingForAJobDescription}</div>}
             </div>
             <div className={s.contactInformation}>
                 <div>
                     <div className={s.capContainer}>
-                        <div className={s.cap}><b>Contacts : </b>
+                        <div className={s.cap}><b>Contacts </b>
                         </div>
                     </div>
 

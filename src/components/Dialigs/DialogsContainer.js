@@ -10,7 +10,7 @@ import {connect} from "react-redux";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import {compose} from "redux";
 import {Dialogs} from './Dialogs';
-import Preloader from '../common/Preloader/Preloader';
+
 
 export class DialogsContainer extends React.Component{
 
@@ -25,9 +25,6 @@ export class DialogsContainer extends React.Component{
     }
 
     render() {
-       /* if (this.props.dialogsPage.fetching) {
-            return <Preloader/>
-        }*/
         return <>
             <Dialogs {...this.props} />
         </>

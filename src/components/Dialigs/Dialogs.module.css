@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
-   /* border: 1px solid black;*/
 }
 
 .ChooseDialogs{
@@ -19,7 +17,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*border: 1px solid black;*/
 }
 
 .MessageRecipient{
@@ -27,7 +24,6 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-   /* border: 1px solid black;*/
 }
 
 .unread{
@@ -39,8 +35,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
-   /* border: 1px solid black;*/
 }
 
 .enterMessage{

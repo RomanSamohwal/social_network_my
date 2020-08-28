@@ -7,7 +7,6 @@ import SelectedDialogs from '../common/Material_ui/SelectedDialogs';
 import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
-import Button from '@material-ui/core/Button';
 import ButtonSend from '../common/Material_ui/ButtonSend';
 import {useHistory} from 'react-router-dom'
 

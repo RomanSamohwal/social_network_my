@@ -1,13 +1,11 @@
-
-.header {
-    grid-area: h; /*называем область*/
-}
-
-
 .loginBlock {
     float: right;
 }
 
 .loginBlock a{
     color: white;
+}
+
+.login{
+    text-decoration: none;
 }

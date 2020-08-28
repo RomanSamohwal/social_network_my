@@ -3,6 +3,8 @@ import styles from "./users.module.css";
 import {NavLink} from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import style from './users.module.css'
+import ImageAvatars from '../common/Material_ui/ImageAvatars';
+import Avatar from '@material-ui/core/Avatar';
 
 const User = ({user,followingInProgress,unfollow,follow }) => {
         return (
@@ -10,7 +12,7 @@ const User = ({user,followingInProgress,unfollow,follow }) => {
           <span>
               <div className={style.userContainer}>
                  <NavLink to={'./profile/' + user.id}>
-                     <img src={user.photos.small != null ? user.photos.small : " "} className={styles.userPhoto}/>
+                     <ImageAvatars avatar = {user.photos.small}/>
                  </NavLink>
               </div>
          <div>
