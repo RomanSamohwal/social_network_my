@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
+.app-wrapper {
+
+   /* display: grid; !*указываем что это grid*!
+
+    height: 50px;
+    grid-template-areas: "h h" "n c"; !*указываем как размещены у нас нашт сроки и колонки*!
+    grid-template-rows: 60px 2fr;  !*указываем сколько строк*!
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 20px; !**!!*расстояние между элементами*!*!*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-wrapper-content {
+    display: flex;
+    justify-content: center;
+    /*grid-area: c;*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.c{
+    color: #eaf1f6;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

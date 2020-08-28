@@ -1,0 +1,104 @@
+.ProfileInfoContainer{
+    width: 100%;
+    color: #1e2464;
+}
+
+.aboutMe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+   /* border: 1px solid black;*/
+}
+
+.allInformation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 120%;
+    /*border: 1px solid black;*/
+}
+
+.generalInformation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  /*  border: 1px solid black;*/
+    width: 100%;
+    padding-left: 5%;
+}
+
+.contactInformation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  /*  border: 1px solid black;*/
+    padding-right: 5%;
+}
+
+.capContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+ /*   border: 1px solid black;*/
+}
+
+.editButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+   /* border: 1px solid black;*/
+    width: 100%;
+    padding: 2%;
+
+}
+
+.content img{
+    padding: 10px;
+    width: 400px;
+}
+
+.descriptionBlock{
+    padding: 10px;
+}
+
+.mainPhoto{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius:100px;
+}
+
+.contact{
+    padding-left: 10px;
+}
+
+.button{
+    background-color: #eaf1f6;
+    border: 2px solid  #eaf1f6;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+}

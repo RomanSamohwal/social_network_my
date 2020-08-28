@@ -1,0 +1,43 @@
+.cloud {
+    border: 1px solid white;
+     /*Толщина рамки в пикселах,тип границы (в данном случае сплошная линия) и цвет линии */
+    border-radius: 30px;
+    height: auto;
+    padding: 5px; /*расстояние от текста до рамки*/
+    max-width: 100%; /*устанавливает максимальную ширину элемента*/
+    word-wrap: break-word; /*указывает, переносить или нет длинные слова, которые не помещаются по ширине в заданную область*/
+    background-color: white; /* внешний фон*/
+    /*position: relative;*/
+}
+
+.wrapper {
+    padding-top: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.before {
+    bottom: 0;
+}
+
+.name {
+    font-style: normal;
+    font-size: 80%;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+    font-style: normal;
+    font-size: 100%;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.time {
+    color: black;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}

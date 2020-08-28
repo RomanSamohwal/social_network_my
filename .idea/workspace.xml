@@ -1,9 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7ca8a921-f9ee-4f75-b4a0-32857b16f14d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MainApp.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StoreContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialigs/DialogItem/DialogItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialigs/DialogsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialigs/Message/Message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Music/Music.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/News/News.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileDataForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Settings/Settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/Paginator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/Users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/users.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/FormsControl/FormsControls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/FormsControl/FormsControls.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Material_ui/BasicPaginator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Material_ui/ButtonSend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Material_ui/CenteredGrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Material_ui/ImageAvatars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Material_ui/PaperMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Material_ui/SelectedDialogs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Material_ui/UploadButtons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/MessageBody/Message.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/MessageBody/Message.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/MessageBody/MessageBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/MessageBody/Messages.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Preloader/SimpleBackdrop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hoc/withAuthRedirect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hoc/withSuspense.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/Login.module.scc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utils/object-helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utils/vadidators/validators.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/app-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/auth-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/profile-reducer.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/profile-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/users-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/users-selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="social_network_my" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gjA2HmTslbdpNZ0nUp9sprd2TD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="D:\finish project\social_network_my\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\finish project\social_network_my\public" />
+      <recent name="D:\finish project\social_network_my\src" />
+      <recent name="D:\finish project\social_network_my" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ca8a921-f9ee-4f75-b4a0-32857b16f14d" name="Default Changelist" comment="" />
+      <created>1598617418989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598617418989</updated>
+      <workItem from="1598617420462" duration="599000" />
+      <workItem from="1598634560351" duration="1264000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/index.d.js" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="497" y="234" key="Github.ShareDialog" timestamp="1598635894378">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="497" y="234" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1598635894378" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598635827319">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598635827319" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1598635827319">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598635827319" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1598635827319">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598635827319" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1598635827319">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598635827319" />
   </component>
 </project>

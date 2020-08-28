@@ -1,0 +1,27 @@
+.userContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+
+.userPhoto{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.selectedPages{
+font-weight: bold;
+}

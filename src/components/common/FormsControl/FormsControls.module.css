@@ -1,0 +1,29 @@
+
+.formControl.error input,
+.formControl.error textarea {
+    border: solid red 2px;
+}
+
+.formControl.error span {
+    color: #ff0712;
+}
+
+.formSummaryError{
+    border: solid red 2px;
+    padding: 5px;
+    color: #ff0712;
+}
+
+.button{
+    background-color: #eaf1f6;
+    border: 2px solid  #eaf1f6;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+}

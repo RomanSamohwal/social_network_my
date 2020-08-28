@@ -1,0 +1,11 @@
+.item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
