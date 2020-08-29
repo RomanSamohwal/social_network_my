@@ -9,6 +9,7 @@ import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import ButtonSend from '../common/Material_ui/ButtonSend';
 import {useHistory} from 'react-router-dom'
+import Preloader from '../common/Preloader/Preloader';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,8 +44,13 @@ export const Dialogs = (props) =>{
     }
 
     let message;
-    return <div>
-        <Container maxWidth='md' style={{padding: '10px'}}>
+
+    if (props.fetching) {
+        return <Preloader/>
+    }
+
+    return <div style={{width: '100%'}}>
+        <Container maxWidth= 'sm' style={{padding: '10px'}}>
             <Paper className={classes.root}>
                 <div
                     className={s.dialogs}>

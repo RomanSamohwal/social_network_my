@@ -33,6 +33,7 @@ function SimpleDialog(props) {
                             </Avatar>
                         </ListItemAvatar>
                         <NavLink style={{textDecoration: 'none'}} to={`/dialogs/${d.id}`}>{d.userName}</NavLink>
+                        {d.hasNewMessages && '!!'}
                     </ListItem>
                 ))}
             </List>

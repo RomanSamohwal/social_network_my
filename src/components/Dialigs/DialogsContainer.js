@@ -34,14 +34,15 @@ export class DialogsContainer extends React.Component{
 }
 
 let mapStateToProps = (state) => {
-
+debugger
     return {
         dialogsPage: state.dialogsPage,
         currentDialogId: state.dialogsPage.dialogs.id,
         newMessagesCount: state.dialogsPage.newMessagesCount,
         selectedDialogId: state.dialogsPage.selectedDialogId,
         currentDialogMessagesCount: state.dialogsPage.currentDialogMessagesCount,
-        login: state.auth.login
+        login: state.auth.login,
+        fetching: state.dialogsPage.fetching
     }
 };
 

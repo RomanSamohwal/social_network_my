@@ -30,7 +30,7 @@ let initialState = {
     newMessagesCount: 0,
     needRefresh: false,
     currentDialogMessagesCount: 0,
-    fetching: true
+    fetching: false
 };
 
 /*export type initialStateType = typeof initialState*/
@@ -102,7 +102,9 @@ export const getDialogs = () => async (dispatch: any) => {
 
 export const getMessages = (userId: any) => async (dispatch: any) => {
     // @ts-ignore
+    dispatch(setFetchingSuccess())
     let result = await dialogAPI.getMessage(userId)
+    dispatch(setFetchingSuccess())
     // @ts-ignore
     if ( result.messages.some(m => !m.viewed)) {
         dispatch(setNeedRefreshSuccess(true))
@@ -133,15 +135,15 @@ export const startDialog = (userId: any) => async (dispatch: any, getState: any)
 
 export const init = (userId: any) => async (dispatch: any) => {
     if (!!userId) {
-        dispatch(setFetchingSuccess())
+
         dispatch(getMessages(userId))
         dispatch(setCurrentDialogSuccess(userId))
         await dispatch(startDialog(userId))
-        dispatch(setFetchingSuccess())
+
         dispatch(getDialogs())
     } else {
         dispatch(getDialogs())
-        dispatch(setFetchingSuccess())
+
     }
 }
 
