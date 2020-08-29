@@ -62,7 +62,7 @@ export const Dialogs = (props) =>{
                                 if (m.senderName === props.login) {
 
                                     return <div key={m.id} className={message}>
-                                        <MessageWithoutIcon name={m.senderName} text={m.body}/>
+                                        <MessageWithoutIcon name={m.senderName} text={m.body} />
                                     </div>
 
                                 } else {

@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7ca8a921-f9ee-4f75-b4a0-32857b16f14d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hoc/withSuspense.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc/withSuspense.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +52,16 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -58,6 +72,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598617418989</updated>
       <workItem from="1598617420462" duration="599000" />
-      <workItem from="1598634560351" duration="5891000" />
+      <workItem from="1598634560351" duration="16195000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1598636072456</created>
@@ -86,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598637869058</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactoring profile information">
+      <created>1598648383461</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598648383462</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,36 +128,37 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="refactoring profile info" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring profile info" />
+    <MESSAGE value="refactoring profile information" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring profile information" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1598637867428">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1598648381332">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598637867428" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598648381332" />
     <state x="497" y="234" key="Github.ShareDialog" timestamp="1598635894378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="497" y="234" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1598635894378" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598647789126">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598664738414">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598647789126" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1598647789125">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598664738414" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1598664738414">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598647789125" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1598647789125">
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598664738414" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1598664738414">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598647789125" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1598647789126">
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598664738414" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1598664738414">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598647789126" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1598648359641">
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598664738414" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1598648384254">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1598648359641" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1598648384254" />
   </component>
 </project>

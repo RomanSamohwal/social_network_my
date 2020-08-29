@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -16,8 +16,15 @@ import Navbar from './components/Navbar/Navbar';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Badge from '@material-ui/core/Badge';
 import MailIcon from '@material-ui/icons/Mail';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import {Redirect, Route, Switch} from 'react-router-dom';
+import Settings from './components/Settings/Settings';
+import ProfileContainer from './components/Profile/ProfileInfo/ProfileContainer';
+import Preloader from './components/common/Preloader/Preloader';
+import News from './components/News/News';
+import Music from './components/Music/Music';
+import UsersContainer from './components/Users/UsersContainer';
+import LoginPages from './components/login/Login';
+const DialogsContainer = React.lazy(() => import('./components/Dialigs/DialogsContainer'));
 
 const drawerWidth = 240;
 
@@ -153,10 +160,19 @@ export default function PersistentDrawerLeft(props) {
             >
                 <div className={classes.drawerHeader} />
                 <Typography paragraph>
-
-                </Typography>
-                <Typography paragraph>
-
+                    <div className='app-wrapper-content'>
+                        <Switch>
+                            <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+                            <Route path='/dialogs/:userId?' render={(props) => <Suspense fallback={<Preloader/>}>
+                                <DialogsContainer userId={props.match.params.userId}/>
+                            </Suspense>}/>
+                            <Route path='/news' render={() => <News/>}/>
+                            <Route path='/music' render={() => <Music/>}/>
+                            <Route path='/users' render={() => <UsersContainer/>}/>
+                            <Route path='/login' render={() => <LoginPages/>}/>
+                            <Redirect exact path={'/'} to={'./profile'} render={() => <ProfileContainer/>}/>
+                        </Switch>
+                    </div>
                 </Typography>
             </main>
         </div>
