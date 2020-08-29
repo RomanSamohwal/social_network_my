@@ -8,6 +8,10 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 import PersonIcon from '@material-ui/icons/Person';
 import {NavLink} from 'react-router-dom';
+import AnnouncementIcon from '@material-ui/icons/Announcement';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 function SimpleDialog(props) {
 
@@ -26,15 +30,19 @@ function SimpleDialog(props) {
             <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
             <List>
                 {props.dialogs.map(d => (
-                    <ListItem button onClick={() => handleListItemClick(d.id)} key={d.key}>
-                        <ListItemAvatar>
-                            <Avatar src={d.photos.small}>
-                                <PersonIcon/>
-                            </Avatar>
-                        </ListItemAvatar>
-                        <NavLink style={{textDecoration: 'none'}} to={`/dialogs/${d.id}`}>{d.userName}</NavLink>
-                        {d.hasNewMessages && '!!'}
-                    </ListItem>
+                    <NavLink style={{textDecoration: 'none'}} to={`/dialogs/${d.id}`}>
+                        <ListItem button onClick={() => handleListItemClick(d.id)} key={d.key}>
+                            <ListItem button>
+                                <ListItemAvatar>
+                                    <Avatar src={d.photos.small}>
+                                        <PersonIcon/>
+                                    </Avatar>
+                                </ListItemAvatar>
+                                <ListItemText primary={d.userName}/>
+                            </ListItem>
+                            {d.hasNewMessages && <AnnouncementIcon color={'secondary'}/>}
+                        </ListItem>
+                    </NavLink>
                 ))}
             </List>
         </Dialog>

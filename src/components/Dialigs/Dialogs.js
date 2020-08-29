@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const Dialogs = (props) =>{
+export const Dialogs = (props) => {
 
     let history = useHistory();
 

@@ -8,7 +8,6 @@ import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import PersistentDrawerLeft from './Panel';
 import {getNewMessagesCount} from './redux/dialogs-reducer';
-const DialogsContainer = React.lazy(() => import('./components/Dialigs/DialogsContainer'));
 
 class App extends React.Component {
     componentDidMount() {

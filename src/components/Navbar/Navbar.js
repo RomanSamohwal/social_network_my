@@ -10,6 +10,7 @@ import AnnouncementIcon from '@material-ui/icons/Announcement';
 import SettingsIcon from '@material-ui/icons/Settings';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import PeopleIcon from '@material-ui/icons/People';
+import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 
 const Navbar = () => {
     return (
@@ -17,15 +18,23 @@ const Navbar = () => {
             <div className={s.item}>
                 <NavLink to="/profile" activeClassName={s.active}>
                     <ListItem button>
-                    <ListItemIcon><PersonIcon/></ListItemIcon>
-                    <ListItemText primary={"Profile"}/>
+                        <ListItemIcon><PersonIcon color={'primary'}/></ListItemIcon>
+                        <ListItemText primary={"Profile"}/>
+                    </ListItem>
+                </NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink to="/friends" activeClassName={s.active}>
+                    <ListItem button>
+                        <ListItemIcon><ImportContactsIcon color={'primary'}/></ListItemIcon>
+                        <ListItemText primary={"Friends"}/>
                     </ListItem>
                 </NavLink>
             </div>
             <div  className={s.item}>
                 <NavLink to= "/dialogs" activeClassName={s.active}>
                     <ListItem button>
-                        <ListItemIcon><MailOutlineIcon/></ListItemIcon>
+                        <ListItemIcon><MailOutlineIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Messages"}/>
                     </ListItem>
                 </NavLink>
@@ -33,7 +42,7 @@ const Navbar = () => {
             <div className={s.item}>
                 <NavLink to = "/news" activeClassName={s.active}>
                     <ListItem button>
-                        <ListItemIcon><AnnouncementIcon/></ListItemIcon>
+                        <ListItemIcon><AnnouncementIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"News"}/>
                     </ListItem>
                 </NavLink>
@@ -41,7 +50,7 @@ const Navbar = () => {
             <div  className={s.item}>
                 <NavLink to = "/music" activeClassName={s.active}>
                     <ListItem button>
-                        <ListItemIcon><MusicNoteIcon/></ListItemIcon>
+                        <ListItemIcon><MusicNoteIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Music"}/>
                     </ListItem>
                 </NavLink>
@@ -49,7 +58,7 @@ const Navbar = () => {
             <div className={s.item}>
                 <NavLink to = "/settings" activeClassName={s.active}>
                     <ListItem button>
-                        <ListItemIcon><SettingsIcon/></ListItemIcon>
+                        <ListItemIcon><SettingsIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Settings"}/>
                     </ListItem>
                 </NavLink>
@@ -57,7 +66,7 @@ const Navbar = () => {
             <div className={s.item}>
                 <NavLink to = "/users" activeClassName={s.active}>
                     <ListItem button>
-                        <ListItemIcon><PeopleIcon/></ListItemIcon>
+                        <ListItemIcon><PeopleIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Users"}/>
                     </ListItem>
                 </NavLink>

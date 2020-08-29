@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca8a921-f9ee-4f75-b4a0-32857b16f14d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Friends/Friends.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialigs/Dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialigs/DialogsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialigs/DialogsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Material_ui/SelectedDialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Material_ui/SelectedDialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/MessageBody/Message.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MessageBody/Message.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +16,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="social_network_my" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,7 +96,7 @@
       <workItem from="1598617420462" duration="599000" />
       <workItem from="1598634560351" duration="17894000" />
       <workItem from="1598676423934" duration="1338000" />
-      <workItem from="1598708734069" duration="4284000" />
+      <workItem from="1598708734069" duration="7877000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1598636072456</created>
@@ -127,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598667601348</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="loading messages">
+      <created>1598716235778</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598716235778</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,37 +159,38 @@
     <MESSAGE value="refactoring profile information" />
     <MESSAGE value="refactoring profile message delete opacity" />
     <MESSAGE value="refactoring panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring panel" />
+    <MESSAGE value="loading messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="loading messages" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1598667600148">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1598716234066">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598667600148" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598716234066" />
     <state x="497" y="234" key="Github.ShareDialog" timestamp="1598635894378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="497" y="234" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1598635894378" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598716171570">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598724067988">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598716171570" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1598716171570">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598724067988" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1598724067987">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598716171570" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1598716171569">
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598724067987" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1598724067987">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598716171569" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1598716171570">
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598724067987" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1598724067987">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598716171570" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1598716187599">
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598724067987" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1598724316495">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1598716187599" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1598724316494" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1598676538265">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
