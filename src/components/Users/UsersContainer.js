@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {
     follow,
@@ -24,6 +24,7 @@ class UsersContainer extends React.Component {
     componentDidMount() {
         let {currentPage, pageSize} = this.props
         this.props.requestUsers(currentPage, pageSize)
+        this.props.handleDrawerClose()
     }
 
     onPageChanged = (pageNumber) => {
@@ -51,16 +52,6 @@ class UsersContainer extends React.Component {
     }
 }
 
-/*let mapStateToProps = (state) => {
-    return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress
-    }
-};*/
 let mapStateToProps = (state) => {
     return {
         users: getUsers(state),

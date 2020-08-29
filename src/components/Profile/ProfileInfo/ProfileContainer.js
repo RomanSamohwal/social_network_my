@@ -13,6 +13,8 @@ import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
 
+
+
     refreshProfile() {
         let userId = this.props.match.params.userId;
         if (!userId) {
@@ -27,7 +29,7 @@ class ProfileContainer extends React.Component {
 
     componentDidMount() {
         this.refreshProfile()
-
+        this.props.handleDrawerClose()
     }
 
     componentDidUpdate(prevProps, prevState) {

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-const Settings = () => {
+const Settings = (props) => {
+    useEffect(() => props.handleDrawerClose(), [])
     return (
         <div >
-            Settings
+        Settings
         </div>
     );
 };

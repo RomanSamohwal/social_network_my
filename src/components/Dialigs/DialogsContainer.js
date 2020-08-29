@@ -16,6 +16,7 @@ export class DialogsContainer extends React.Component{
 
     componentDidMount() {
         this.props.init(this.props.userId)
+        this.props.handleDrawerClose()
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-const Music = () => {
+const Music = (props) => {
+    useEffect(() => props.handleDrawerClose(), [])
     return (
         <div>
 

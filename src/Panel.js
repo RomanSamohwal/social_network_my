@@ -17,13 +17,13 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import Badge from '@material-ui/core/Badge';
 import MailIcon from '@material-ui/icons/Mail';
 import {Redirect, Route, Switch} from 'react-router-dom';
-import Settings from './components/Settings/Settings';
 import ProfileContainer from './components/Profile/ProfileInfo/ProfileContainer';
 import Preloader from './components/common/Preloader/Preloader';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import UsersContainer from './components/Users/UsersContainer';
 import LoginPages from './components/login/Login';
+import Settings from './components/Settings/Settings';
 const DialogsContainer = React.lazy(() => import('./components/Dialigs/DialogsContainer'));
 
 const drawerWidth = 240;
@@ -162,15 +162,16 @@ export default function PersistentDrawerLeft(props) {
                 <Typography paragraph>
                     <div className='app-wrapper-content'>
                         <Switch>
-                            <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+                            <Route path='/profile/:userId?' render={() => <ProfileContainer handleDrawerClose = {handleDrawerClose}/>}/>
                             <Route path='/dialogs/:userId?' render={(props) => <Suspense fallback={<Preloader/>}>
-                                <DialogsContainer userId={props.match.params.userId}/>
+                                <DialogsContainer userId={props.match.params.userId} handleDrawerClose = {handleDrawerClose}/>
                             </Suspense>}/>
-                            <Route path='/news' render={() => <News/>}/>
-                            <Route path='/music' render={() => <Music/>}/>
-                            <Route path='/users' render={() => <UsersContainer/>}/>
+                            <Route path='/news' render={() => <News handleDrawerClose = {handleDrawerClose}/>}/>
+                            <Route path='/music' render={() => <Music handleDrawerClose = {handleDrawerClose}/>}/>
+                            <Route path='/settings' render={() => <Settings handleDrawerClose = {handleDrawerClose}/>}/>
+                            <Route path='/users' render={() => <UsersContainer handleDrawerClose = {handleDrawerClose}/>}/>
                             <Route path='/login' render={() => <LoginPages/>}/>
-                            <Redirect exact path={'/'} to={'./profile'} render={() => <ProfileContainer/>}/>
+                            <Redirect exact path={'/'} to={'./profile'} render={() => <ProfileContainer handleDrawerClose = {handleDrawerClose}/>}/>
                         </Switch>
                     </div>
                 </Typography>
