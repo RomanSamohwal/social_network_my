@@ -4,7 +4,7 @@ const Music = (props) => {
     useEffect(() => props.handleDrawerClose(), [])
     return (
         <div>
-
+            <h2>in developing</h2>
         </div>
     );
 };

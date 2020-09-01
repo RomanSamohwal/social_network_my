@@ -1,11 +1,11 @@
 import React from "react";
 import SimpleBackdrop from './SimpleBackdrop';
 
-let Preloader = (props) => {
+let Preloader = () => {
     return (
-        <div>
+        <>
             <SimpleBackdrop/>
-        </div>
+        </>
     )
 };
 

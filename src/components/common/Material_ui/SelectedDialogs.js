@@ -10,8 +10,6 @@ import PersonIcon from '@material-ui/icons/Person';
 import {NavLink} from 'react-router-dom';
 import AnnouncementIcon from '@material-ui/icons/Announcement';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import SettingsIcon from '@material-ui/icons/Settings';
 
 function SimpleDialog(props) {
 
@@ -30,7 +28,7 @@ function SimpleDialog(props) {
             <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
             <List>
                 {props.dialogs.map(d => (
-                    <NavLink style={{textDecoration: 'none'}} to={`/dialogs/${d.id}`}>
+                    <NavLink key = {d.id} style={{textDecoration: 'none'}} to={`/dialogs/${d.id}`}>
                         <ListItem button onClick={() => handleListItemClick(d.id)} key={d.key}>
                             <ListItem button>
                                 <ListItemAvatar>

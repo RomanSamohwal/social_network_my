@@ -9,8 +9,8 @@ const Header = (props) => {
 
             <div className={s.loginBlock}>
                 {props.isAuth
-                    ? <div> <Button variant="text" color="inherit" onClick={props.Logout}>Log out</Button> </div>
-                    : <div > <NavLink to={'/login'} className={s.login}>Login</NavLink></div>  }
+                    ? <div><Button variant="text" color="inherit" onClick={props.Logout}>Log out</Button></div>
+                    : <div><NavLink to={'/login'} className={s.login}>Login</NavLink></div>}
             </div>
         </header>
     );

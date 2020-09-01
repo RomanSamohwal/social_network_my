@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import './App.css';
 import {withRouter, HashRouter} from "react-router-dom";
 import {connect, Provider} from "react-redux";

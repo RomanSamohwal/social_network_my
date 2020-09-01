@@ -9,15 +9,14 @@ const DELETE_POST = 'network/profile-reducer/DELETE_POST';
 const SAVE_PHOTO = 'network/profile-reducer/SAVE_PHOTO';
 
 
-
 let initialState = {
     posts: [
         {
             id: 1,
             message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt " +
-                     "ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco " +
-                     "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in " +
-                     "voluptate velit esse cillum dolore eu fugiat nulla pariatur.?",
+                "ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco " +
+                "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in " +
+                "voluptate velit esse cillum dolore eu fugiat nulla pariatur.?",
             likesCount: 12
         },
     ] as Array<PostType>,
@@ -28,7 +27,7 @@ let initialState = {
 
 export type InitialStateType = typeof initialState
 
-const profileReducer = (state = initialState, action: any):InitialStateType => {
+const profileReducer = (state = initialState, action: any): InitialStateType => {
     switch (action.type) {
         case ADD_POST:
             let newPost = {
@@ -36,9 +35,7 @@ const profileReducer = (state = initialState, action: any):InitialStateType => {
                 message: action.newPostText,
                 likesCount: 0
             };
-            //делаем копию state
             return {...state, posts: [...state.posts, newPost]}
-        //т.к. мы сделали копию поверхностную state делаем копию массива
 
         case SET_USER_PROFILE:
             return {...state, profile: action.profile}
@@ -53,7 +50,8 @@ const profileReducer = (state = initialState, action: any):InitialStateType => {
 
         case SAVE_PHOTO:
             return {
-                ...state, profile: {...state.profile, photos: action.photos} as ProfileType }
+                ...state, profile: {...state.profile, photos: action.photos} as ProfileType
+            }
 
         default :
             return state;
@@ -64,17 +62,20 @@ type AddPostActionCreatorActionType = {
     type: typeof ADD_POST
     newPostText: string
 }
-export const addPostActionCreator = (newPostText: string): AddPostActionCreatorActionType => ({type: ADD_POST, newPostText});
+export const addPostActionCreator = (newPostText: string): AddPostActionCreatorActionType => ({
+    type: ADD_POST,
+    newPostText
+});
 type SetUserProfileActionType = {
     type: typeof SET_USER_PROFILE
     profile: ProfileType
 }
-export const setUserProfile = (profile:ProfileType):SetUserProfileActionType => ({type: SET_USER_PROFILE, profile});
-type SetStatusActionType = {type: typeof SET_STATUS, status: string}
-export const setStatus = (status: string):SetStatusActionType => ({type: SET_STATUS, status});
+export const setUserProfile = (profile: ProfileType): SetUserProfileActionType => ({type: SET_USER_PROFILE, profile});
+type SetStatusActionType = { type: typeof SET_STATUS, status: string }
+export const setStatus = (status: string): SetStatusActionType => ({type: SET_STATUS, status});
 type DeletePostActionType = { type: typeof DELETE_POST, postId: number }
 export const deletePost = (postId: number): DeletePostActionType => ({type: DELETE_POST, postId});
-type SavePhotoSuccessActionType = {type: typeof SAVE_PHOTO, photos: PhotosType }
+type SavePhotoSuccessActionType = { type: typeof SAVE_PHOTO, photos: PhotosType }
 export const savePhotoSuccess = (photos: PhotosType): SavePhotoSuccessActionType => ({type: SAVE_PHOTO, photos});
 
 export const getUserProfile = (userId: number) => async (dispatch: any) => {
@@ -102,12 +103,11 @@ export const savePhoto = (file: any) => async (dispatch: any) => {
 }
 
 export const saveProfile = (profile: ProfileType) => async (dispatch: any, getState: any) => {
-    const userId =  getState().auth.id;
+    const userId = getState().auth.id;
     let response = await profileAPI.saveProfile(profile)
     if (response.data.resultCode === 0) {
         dispatch(getUserProfile(userId))
-    }else{
-       /* let message = response.data.messages.length > 0 ? response.data.messages[0] : "Some error";*/
+    } else {
         dispatch(stopSubmit("redux-form", {_error: response.data.messages[0]}))
     }
 }

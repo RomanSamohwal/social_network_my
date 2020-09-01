@@ -26,9 +26,10 @@ export const Dialogs = (props) => {
     let history = useHistory();
 
     useEffect(() => {
-            if (!!props.userId) {
-                history.push('.')
-            }}, [])
+        if (!!props.userId) {
+            history.push('.')
+        }
+    }, [])
 
     const classes = useStyles();
 
@@ -40,7 +41,7 @@ export const Dialogs = (props) => {
     }
 
     let onTextareaHandler = (e) => {
-       setState( e.currentTarget.value)
+        setState(e.currentTarget.value)
     }
 
     let message;
@@ -50,12 +51,12 @@ export const Dialogs = (props) => {
     }
 
     return <div style={{width: '100%'}}>
-        <Container maxWidth= 'sm' style={{padding: '10px'}}>
+        <Container maxWidth='sm' style={{padding: '10px'}}>
             <Paper className={classes.root}>
                 <div
-                    className={s.dialogs}>
-                    <div className={s.ChooseDialogs}>
-                        <div>
+                    className={s.dialogs} key={'3'}>
+                    <div className={s.ChooseDialogs} key={'2'}>
+                        <div key={'1'}>
                             <SelectedDialogs dialogs={props.dialogsPage.dialogs}/>
                         </div>
                     </div>
@@ -68,7 +69,7 @@ export const Dialogs = (props) => {
                                 if (m.senderName === props.login) {
 
                                     return <div key={m.id} className={message}>
-                                        <MessageWithoutIcon name={m.senderName} text={m.body} />
+                                        <MessageWithoutIcon name={m.senderName} text={m.body} key={m.id}/>
                                     </div>
 
                                 } else {
@@ -78,7 +79,8 @@ export const Dialogs = (props) => {
                                         }
                                     })
                                     return <div key={m.id} className={s.MessageSender}>
-                                        <Messages name={m.senderName} text={m.body} avatar={user.photos.small||user.photos.large}/>
+                                        <Messages name={m.senderName} text={m.body}
+                                                  avatar={user.photos.small || user.photos.large} key={m.id}/>
                                     </div>
                                 }
                             })}

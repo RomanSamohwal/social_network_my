@@ -25,6 +25,9 @@ export const userAPI = {
     unfollow(userId) {
         return instance.delete(`follow/${userId}`)
     },
+    getUsersFriends() {
+        return instance.get('users?friend=true').then(res => res.data.items)
+    }
 };
 
 export const profileAPI = {
@@ -72,25 +75,25 @@ export const dialogAPI = {
         return instance.get('dialogs').then(res => res.data)
     },
     startDialog(userId) {
-      return instance.put(`dialogs/${userId}`).then(res => res.data)
+        return instance.put(`dialogs/${userId}`).then(res => res.data)
     },
     getMessage(userId) {
-        return instance.get(`dialogs/${userId}/messages`).then(res =>({
+        return instance.get(`dialogs/${userId}/messages`).then(res => ({
             messages: res.data.items,
             totalCount: res.data.totalCount
         }))
     },
-    sendMessage(userId,body){
-        return instance.post(`dialogs/${userId}/messages`, {body}).then(res=>res.data)
+    sendMessage(userId, body) {
+        return instance.post(`dialogs/${userId}/messages`, {body}).then(res => res.data)
     },
     getNewMessagesCount() {
         return instance.get(`dialogs/messages/new/count`).then(res => res.data)
     },
-    getMessagesNewerThen(userId, data){
+    getMessagesNewerThen(userId, data) {
         return instance.get(`dialogs/${userId}/messages/newerThen?=${data}`).then(res => res.data)
     },
-    deleteMessage(messageId){
-      return instance.delete(`dialogs/messages/${messageId}`).then(res => res.data )
+    deleteMessage(messageId) {
+        return instance.delete(`dialogs/messages/${messageId}`).then(res => res.data)
     },
 
 }

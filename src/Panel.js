@@ -1,12 +1,11 @@
 import React, {Suspense} from 'react';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -24,7 +23,9 @@ import Music from './components/Music/Music';
 import UsersContainer from './components/Users/UsersContainer';
 import LoginPages from './components/login/Login';
 import Settings from './components/Settings/Settings';
+
 const DialogsContainer = React.lazy(() => import('./components/Dialigs/DialogsContainer'));
+const Friends = React.lazy(() => import('./components/Friends/Friends'))
 
 const drawerWidth = 240;
 
@@ -100,7 +101,7 @@ export default function PersistentDrawerLeft(props) {
 
     return (
         <div className={classes.root}>
-            <CssBaseline />
+            <CssBaseline/>
             <AppBar
                 position="fixed"
                 className={clsx(classes.appBar, {
@@ -115,7 +116,7 @@ export default function PersistentDrawerLeft(props) {
                         edge="start"
                         className={clsx(classes.menuButton, open && classes.hide)}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
 
                     <div style={{
@@ -130,7 +131,7 @@ export default function PersistentDrawerLeft(props) {
                         <div>
                             <HeaderContainer/>
                         </div>
-                        </div>
+                    </div>
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -158,23 +159,28 @@ export default function PersistentDrawerLeft(props) {
                     [classes.contentShift]: open,
                 })}
             >
-                <div className={classes.drawerHeader} />
-                <Typography paragraph>
-                    <div className='app-wrapper-content'>
+                <div className={classes.drawerHeader}/>
+                <div className='app-wrapper-content'>
+                    <div paragraph='true' style={{width: '100%' , padding: '10px'}}>
                         <Switch>
-                            <Route path='/profile/:userId?' render={() => <ProfileContainer handleDrawerClose = {handleDrawerClose}/>}/>
+                            <Route path='/profile/:userId?'
+                                   render={() => <ProfileContainer handleDrawerClose={handleDrawerClose}/>}/>
                             <Route path='/dialogs/:userId?' render={(props) => <Suspense fallback={<Preloader/>}>
-                                <DialogsContainer userId={props.match.params.userId} handleDrawerClose = {handleDrawerClose}/>
+                                <DialogsContainer userId={props.match.params.userId}
+                                                  handleDrawerClose={handleDrawerClose}/>
                             </Suspense>}/>
-                            <Route path='/news' render={() => <News handleDrawerClose = {handleDrawerClose}/>}/>
-                            <Route path='/music' render={() => <Music handleDrawerClose = {handleDrawerClose}/>}/>
-                            <Route path='/settings' render={() => <Settings handleDrawerClose = {handleDrawerClose}/>}/>
-                            <Route path='/users' render={() => <UsersContainer handleDrawerClose = {handleDrawerClose}/>}/>
+                            <Route path='/news' render={() => <News handleDrawerClose={handleDrawerClose}/>}/>
+                            <Route path='/music' render={() => <Music handleDrawerClose={handleDrawerClose}/>}/>
+                            <Route path='/settings' render={() => <Settings handleDrawerClose={handleDrawerClose}/>}/>
+                            <Route path='/users' render={() => <UsersContainer handleDrawerClose={handleDrawerClose}/>}/>
+                            <Route path='/friends' render={() => <Suspense fallback={<Preloader/>}>
+                                <Friends handleDrawerClose={handleDrawerClose}/></Suspense>}/>
                             <Route path='/login' render={() => <LoginPages/>}/>
-                            <Redirect exact path={'/'} to={'./profile'} render={() => <ProfileContainer handleDrawerClose = {handleDrawerClose}/>}/>
+                            <Redirect exact path={'/'} to={'./profile'}
+                                      render={() => <ProfileContainer handleDrawerClose={handleDrawerClose}/>}/>
                         </Switch>
                     </div>
-                </Typography>
+                </div>
             </main>
         </div>
     );

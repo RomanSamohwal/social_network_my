@@ -31,8 +31,8 @@ const Navbar = () => {
                     </ListItem>
                 </NavLink>
             </div>
-            <div  className={s.item}>
-                <NavLink to= "/dialogs" activeClassName={s.active}>
+            <div className={s.item}>
+                <NavLink to="/dialogs" activeClassName={s.active}>
                     <ListItem button>
                         <ListItemIcon><MailOutlineIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Messages"}/>
@@ -40,15 +40,15 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to = "/news" activeClassName={s.active}>
+                <NavLink to="/news" activeClassName={s.active}>
                     <ListItem button>
                         <ListItemIcon><AnnouncementIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"News"}/>
                     </ListItem>
                 </NavLink>
             </div>
-            <div  className={s.item}>
-                <NavLink to = "/music" activeClassName={s.active}>
+            <div className={s.item}>
+                <NavLink to="/music" activeClassName={s.active}>
                     <ListItem button>
                         <ListItemIcon><MusicNoteIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Music"}/>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to = "/settings" activeClassName={s.active}>
+                <NavLink to="/settings" activeClassName={s.active}>
                     <ListItem button>
                         <ListItemIcon><SettingsIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Settings"}/>
@@ -64,7 +64,7 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to = "/users" activeClassName={s.active}>
+                <NavLink to="/users" activeClassName={s.active}>
                     <ListItem button>
                         <ListItemIcon><PeopleIcon color={'primary'}/></ListItemIcon>
                         <ListItemText primary={"Users"}/>

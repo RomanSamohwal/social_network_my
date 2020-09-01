@@ -5,21 +5,20 @@ import {Field, reduxForm} from "redux-form";
 import {Textarea} from "../../common/FormsControl/FormsControls";
 import SendIcon from '@material-ui/icons/Send';
 
-const MyPosts = React.memo (props => {
+const MyPosts = React.memo(props => {
 
     let onAddPost = (values) => {
         props.addPost(values.newPostText)
     };
 
-    let avatar;
-    { avatar = props.photo?props.photo.photos.small:''}
+    let avatar = props.photo ? props.photo.photos.small : ''
 
     let postsElement = props.posts.map(p =>
         <Post key={p.id} message={p.message} likeCount={p.likesCount} profile={props.profile} avatar={avatar}/>);
 
     return (
         <div className={s.postsBlock}>
-            <PostReduxForm onSubmit = {onAddPost}/>
+            <PostReduxForm onSubmit={onAddPost}/>
             <div className={s.posts}>
                 {postsElement}
             </div>
@@ -27,17 +26,17 @@ const MyPosts = React.memo (props => {
     );
 });
 
-const AddPostForm = (props)=> {
-    return(
-        <form onSubmit={props.handleSubmit} >
+const AddPostForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
             <div className={s.postContainer}>
                 <div>
                     <Field component={Textarea} name='newPostText'
                            placeholder='enter your post'/>
                 </div>
-               <div>
+                <div>
                     <button className={s.button}><SendIcon color={'primary'}/></button>
-               </div>
+                </div>
             </div>
         </form>
     )

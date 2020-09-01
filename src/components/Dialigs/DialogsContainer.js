@@ -30,11 +30,9 @@ export class DialogsContainer extends React.Component{
             <Dialogs {...this.props} />
         </>
     }
-
 }
 
 let mapStateToProps = (state) => {
-debugger
     return {
         dialogsPage: state.dialogsPage,
         currentDialogId: state.dialogsPage.dialogs.id,

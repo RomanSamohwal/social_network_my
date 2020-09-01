@@ -1,6 +1,5 @@
-/*
 import profileReducer, {addPostActionCreator, deletePost} from "./profile-reducer";
-/!*import React from "react";*!/
+/*import React from "react";*/
 
 let state = {
     posts: [
@@ -27,4 +26,3 @@ test('length of post should be incremented', () => {
     let newState = profileReducer(state,action);
      //3 expectation
     expect(newState.posts.length).toBe(3)});
-*/

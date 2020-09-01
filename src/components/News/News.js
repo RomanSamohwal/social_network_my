@@ -3,8 +3,8 @@ import React, {useEffect} from 'react';
 const News = (props) => {
     useEffect(() => props.handleDrawerClose(), [])
     return (
-        <div >
-           News
+        <div>
+            <h2>in developing</h2>
         </div>
     );
 };

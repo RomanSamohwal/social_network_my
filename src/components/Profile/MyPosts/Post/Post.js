@@ -6,10 +6,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 const Post = (props) => {
     return (
         <div className={s.item}>
-         <ImageAvatars avatar = {props.avatar}/>
-           <div style={{ color: '#1e2464'}}>{props.message}</div>
+            <ImageAvatars avatar={props.avatar}/>
+            <div style={{color: '#1e2464'}}>{props.message}</div>
             <div>
-            <span >
+            <span>
                 <FavoriteIcon color={'primary'}/>{props.likeCount}</span>
             </div>
         </div>

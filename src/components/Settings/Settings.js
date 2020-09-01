@@ -4,7 +4,7 @@ const Settings = (props) => {
     useEffect(() => props.handleDrawerClose(), [])
     return (
         <div >
-        Settings
+       <h2>in developing</h2>
         </div>
     );
 };

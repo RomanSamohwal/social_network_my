@@ -8,7 +8,7 @@ import {
     saveProfile,
     updateStatus
 } from "../../../redux/profile-reducer";
-import {Redirect, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import {compose} from "redux";
 
 class ProfileContainer extends React.Component {

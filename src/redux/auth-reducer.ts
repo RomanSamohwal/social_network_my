@@ -5,7 +5,7 @@ const SET_USER_DATA = 'network/auth/SET_USER_DATA';
 const GET_CAPTCHA_URL = 'network/auth/GET_CAPTCHA_URL';
 
 let initialState = {
-    "id": null as  number | null,
+    "id": null as number | null,
     "login": null as string | null,
     "email": null as string | null,
     //залогинен да либо нет
@@ -16,13 +16,14 @@ let initialState = {
 
 export type InitialStateType = typeof initialState
 
-const authReducer = (state = initialState, action: any):InitialStateType => {
+const authReducer = (state = initialState, action: any): InitialStateType => {
     switch (action.type) {
         case SET_USER_DATA:
         case GET_CAPTCHA_URL:
             return {
                 ...state,
-               ...action.payload};
+                ...action.payload
+            };
         default :
             return state;
     }

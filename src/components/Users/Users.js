@@ -4,7 +4,7 @@ import BasicPagination from '../common/Material_ui/BasicPaginator';
 import style from './users.module.css'
 
 
-const Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, users, followingInProgress, unfollow,follow, ...props}) => {
+const Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, users, followingInProgress, unfollow, follow, ...props}) => {
     return (
         <div className={style.userContainer}>
             <div>

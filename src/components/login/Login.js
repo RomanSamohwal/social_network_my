@@ -11,20 +11,20 @@ import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import s from './Login.module.scc.css'
 
-const LoginForm = ({handleSubmit,error,captchaUrl}) => {
-  return (
-      <form onSubmit={handleSubmit}>
-          {createField("Login", 'email', InputType, [required])}
-          {createField("Password", 'password', InputType, [required], {type: "password"})}
-          {createField(null, 'rememberMe', InputType, [], {type: 'checkbox'}, 'remember me')}
-          {captchaUrl && <img src={captchaUrl}/>}
-          {captchaUrl && createField("Symbols from image", "captcha", InputType, [required])}
-          {error && <div className={style.formSummaryError}>{error}</div>}
-          <div>
-              <button className={style.button}><VpnKeyIcon color={'primary'}/></button>
-        </div>
-      </form>
-  )
+const LoginForm = ({handleSubmit, error, captchaUrl}) => {
+    return (
+        <form onSubmit={handleSubmit}>
+            {createField("Login", 'email', InputType, [required])}
+            {createField("Password", 'password', InputType, [required], {type: "password"})}
+            {createField(null, 'rememberMe', InputType, [], {type: 'checkbox'}, 'remember me')}
+            {captchaUrl && <img src={captchaUrl}/>}
+            {captchaUrl && createField("Symbols from image", "captcha", InputType, [required])}
+            {error && <div className={style.formSummaryError}>{error}</div>}
+            <div>
+                <button className={style.button}><VpnKeyIcon color={'primary'}/></button>
+            </div>
+        </form>
+    )
 };
 
 const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);

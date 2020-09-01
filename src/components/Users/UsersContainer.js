@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {
     follow,
@@ -17,7 +17,6 @@ import {
 } from "../../redux/users-selectors";
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
-import style from './users.module.css'
 
 class UsersContainer extends React.Component {
 
@@ -37,15 +36,15 @@ class UsersContainer extends React.Component {
             {this.props.isFetching ? <Preloader/> : ""}
             <Container maxWidth={'sm'}>
                 <Paper style={{backgroundColor: '#eaf1f6'}}>
-                      <Users totalUsersCount={this.props.totalUsersCount}
-                             pageSize={this.props.pageSize}
-                             currentPage={this.props.currentPage}
-                             users={this.props.users}
-                             onPageChanged={this.onPageChanged}
-                             unfollow={this.props.unfollow}
-                             follow={this.props.follow}
-                             followingInProgress={this.props.followingInProgress}
-                      />
+                    <Users totalUsersCount={this.props.totalUsersCount}
+                           pageSize={this.props.pageSize}
+                           currentPage={this.props.currentPage}
+                           users={this.props.users}
+                           onPageChanged={this.onPageChanged}
+                           unfollow={this.props.unfollow}
+                           follow={this.props.follow}
+                           followingInProgress={this.props.followingInProgress}
+                    />
                 </Paper>
             </Container>
         </>
@@ -63,7 +62,7 @@ let mapStateToProps = (state) => {
     }
 };
 
-export default compose( connect(mapStateToProps,
+export default compose(connect(mapStateToProps,
     {
         toggleFollowingProgress,
         follow,

@@ -1,5 +1,5 @@
 import {dialogAPI} from '../api/api';
-import exp from 'constants';
+
 
 const SEND_MESSAGE_SUCCESS = 'network/dialog-reducer/SEND_MESSAGE'
 const GET_DIALOGS_SUCCESS = 'network/dialog-reducer/GET_DIALOGS_SUCCESS'
@@ -86,12 +86,22 @@ type SendMessageCreatorActionType = {
 
 export const getDialogsSuccess = (dialogs: any) => ({type: GET_DIALOGS_SUCCESS, payload: {dialogs}})
 export const putUpDialogSuccess = (userId: any) => ({type: PUT_UP_DIALOG_SUCCESS, userId})
-export const getMessagesSuccess = (messages: any, totalCount: any)=> ({type: GET_MESSAGE_SUCCESS, payload: {messages, currentDialogMessagesCount: totalCount}})
-export const setCurrentDialogSuccess = (selectedDialogId: any) => ({type: SET_CURRENT_DIALOG_SUCCESS,  payload: {selectedDialogId}})
+export const getMessagesSuccess = (messages: any, totalCount: any) => ({
+    type: GET_MESSAGE_SUCCESS,
+    payload: {messages, currentDialogMessagesCount: totalCount}
+})
+export const setCurrentDialogSuccess = (selectedDialogId: any) => ({
+    type: SET_CURRENT_DIALOG_SUCCESS,
+    payload: {selectedDialogId}
+})
 export const sendMessageSuccess = (message: any) => ({type: SEND_MESSAGE_SUCCESS, message})
-export const setNewMessagesCountSuccess = (count: any)=>({type: SET_NEW_MESSAGES_COUNT_SUCCESS, count})
-export const setHasNewMessagesSuccess = (userId: any,hasNewMessages: boolean )=>({type: SET_HAS_NEW_MESSAGES_SUCCESS, userId,hasNewMessages})
-export const setNeedRefreshSuccess = (needRefresh: any)=>({type: SET_NEED_REFRESH_SUCCESS, needRefresh})
+export const setNewMessagesCountSuccess = (count: any) => ({type: SET_NEW_MESSAGES_COUNT_SUCCESS, count})
+export const setHasNewMessagesSuccess = (userId: any, hasNewMessages: boolean) => ({
+    type: SET_HAS_NEW_MESSAGES_SUCCESS,
+    userId,
+    hasNewMessages
+})
+export const setNeedRefreshSuccess = (needRefresh: any) => ({type: SET_NEED_REFRESH_SUCCESS, needRefresh})
 export const setFetchingSuccess = () => ({type: SET_FETCHING_SUCCESS})
 
 export const getDialogs = () => async (dispatch: any) => {
@@ -106,7 +116,7 @@ export const getMessages = (userId: any) => async (dispatch: any) => {
     let result = await dialogAPI.getMessage(userId)
     dispatch(setFetchingSuccess())
     // @ts-ignore
-    if ( result.messages.some(m => !m.viewed)) {
+    if (result.messages.some(m => !m.viewed)) {
         dispatch(setNeedRefreshSuccess(true))
     }
     dispatch(getMessagesSuccess(result.messages, result.totalCount))
@@ -151,7 +161,8 @@ export const updateDialog = (userId: any) => (dispatch: any) => {
     if (!!userId) {
         dispatch(getMessages(userId))
         dispatch(setCurrentDialogSuccess(userId))
-    } else {  dispatch(setFetchingSuccess())
+    } else {
+        dispatch(setFetchingSuccess())
         dispatch(setCurrentDialogSuccess(null))
     }
 }
